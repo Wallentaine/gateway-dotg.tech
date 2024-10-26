@@ -1,5 +1,5 @@
-import { Controller, Get, Query } from '@nestjs/common';
-import { SearchDTO } from './dto';
+import { Body, Controller, Get, Post, Query } from '@nestjs/common';
+import { BookDTO, SearchDTO, StandQueueDTO } from './dto';
 import { BookingService } from './booking.service';
 
 @Controller('booking')
@@ -7,7 +7,21 @@ export class BookingController {
   constructor(private readonly bookingService: BookingService) {}
 
   @Get('search')
-  public async search(@Query() searchDto: SearchDTO) {
-    return await this.bookingService.search(searchDto);
+  public async search(
+    @Query('from') from: string,
+    @Query('to') to: string,
+    @Query('date') date: Date,
+  ) {
+    return await this.bookingService.search({ from, to, date });
+  }
+
+  @Post('book')
+  public async book(@Body() bookDto: BookDTO) {
+    return await this.bookingService.book(bookDto);
+  }
+
+  @Post('stand-queue')
+  public async standQueue(@Body() standQueueDto: StandQueueDTO) {
+    await this.bookingService.standQueue(standQueueDto);
   }
 }
