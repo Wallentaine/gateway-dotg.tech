@@ -18,6 +18,7 @@ export class BookingService {
   }
 
   public async standQueue(standQueueDto: StandQueueDTO) {
+    this.logger.log(standQueueDto);
     return this.client.send('booking.stand.queue', standQueueDto);
   }
 }
