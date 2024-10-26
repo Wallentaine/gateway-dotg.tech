@@ -22,6 +22,6 @@ export class BookingController {
 
   @Post('stand-queue')
   public async standQueue(@Body() standQueueDto: StandQueueDTO) {
-    await this.bookingService.standQueue(standQueueDto);
+    return await this.bookingService.standQueue(standQueueDto);
   }
 }
