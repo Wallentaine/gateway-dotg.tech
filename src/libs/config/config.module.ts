@@ -1,4 +1,4 @@
-import { dotenvLoader, fileLoader, selectConfig, TypedConfigModule } from 'nest-typed-config';
+import { fileLoader, selectConfig, TypedConfigModule } from 'nest-typed-config';
 import { ConfigSchema } from './config.schema';
 
 export const ConfigModule = TypedConfigModule.forRoot({

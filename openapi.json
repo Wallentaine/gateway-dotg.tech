@@ -1,1 +1,1 @@
-{"openapi":"3.0.0","paths":{},"info":{"title":"Jobhire Gayway","description":"API specification for jobhire-gateway","version":"0.0.1","contact":{}},"tags":[],"servers":[],"components":{"schemas":{}}}
+{"openapi":"3.0.0","paths":{"/g/booking/search":{"get":{"operationId":"BookingController_search","parameters":[],"responses":{"200":{"description":""}}}}},"info":{"title":"Dotg Gayway","description":"API specification for jobhire-gateway","version":"0.0.1","contact":{}},"tags":[],"servers":[],"components":{"schemas":{}}}
