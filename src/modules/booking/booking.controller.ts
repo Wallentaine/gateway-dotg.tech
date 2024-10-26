@@ -27,6 +27,6 @@ export class BookingController {
   @ApiOkResponse({ status: 201 })
   @Post('stand-queue')
   public async standQueue(@Body() standQueueDto: StandQueueDTO) {
-    await this.bookingService.standQueue(standQueueDto);
+    return await this.bookingService.standQueue(standQueueDto);
   }
 }
