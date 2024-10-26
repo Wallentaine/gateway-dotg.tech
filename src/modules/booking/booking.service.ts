@@ -18,6 +18,6 @@ export class BookingService {
   }
 
   public async standQueue(standQueueDto: StandQueueDTO) {
-    this.client.send('booking.stand.queue', standQueueDto);
+    return this.client.send('booking.stand.queue', standQueueDto);
   }
 }
