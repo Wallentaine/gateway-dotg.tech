@@ -40,7 +40,7 @@ async function bootstrap() {
   );
 
   const swaggerConfig = new DocumentBuilder()
-    .setTitle('Dotg Gayway')
+    .setTitle('Dotg Gateway')
     .setDescription(`API specification for ${config.name}`)
     .setVersion(version)
     .build();
